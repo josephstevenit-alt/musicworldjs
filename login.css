@@ -1,0 +1,163 @@
+/* Background for Auth Pages */
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Lobster&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: gradientBG 10s ease infinite;
+  background: url("https://i.pinimg.com/1200x/76/04/91/76049190151949b9cea564b97fd5f51c.jpg") no-repeat center center/cover;  
+}
+header {
+  position: absolute; /* Stays at the top */
+  top: 20px;          /* Distance from the top */
+  left: 20px;   
+  text-align: left;
+}
+
+header .logo h1 {
+  font-size: 24px; /* Adjust size */
+  color: white;    /* Change color if background is dark */
+  font-family: "Playfair", serif; /* Modern font */
+  font-size: 2rem;
+}
+
+header .logo h1 span {
+  color: #ff4081;  /* Highlight MusicWorld */
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: inherit;
+}
+
+
+/* Login Container */
+.login-container {
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(7px);
+  font-size: 3rem;
+  font-family: "Playfair", serif;
+
+}
+
+/* Title */
+.login-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color:white;
+  font-weight: bold;
+  font-family: "Playfair", serif;
+    font-size: 3rem;
+
+
+}
+
+.subtitle {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 14px;
+ font-family: "Playfair", serif;
+
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #ff4081;
+  box-shadow: 0 2px 10px rgba(255, 64, 129, 0.5);
+}
+
+/* Remove autofill background in Chrome/Safari */
+.input-group input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.input-group label {
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  color: white;          /* softer gray */
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: #ff4081;
+}
+
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff4081, #f72585);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff79a6, #f783ac);
+  transform: scale(1.05);
+}
+
+/* Switch link */
+.switch-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.switch-link a {
+  color: #ff4081;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.switch-link a:hover {
+  color: #ff4081;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
