@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | MusicWorld</title>
+  <link rel="stylesheet" href="register.css">
+    <script src="function.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="register-container">
+    <!-- Left Side (Image + Text) -->
+    <div class="left-panel">
+      <div class="overlay">
+        <h1>New to <span>MusicWorld?</span></h1>
+        <p>Join us and dive into unlimited music. Create your account today and explore beats, playlists, and trending tracks.</p>
+        <a href="index.html" class="btn-outline">Already have an account?</a>
+      </div>
+    </div>
+
+    <!-- Right Side (Form) -->
+    <div class="right-panel">
+      <h2>Create Account</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Choose a username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required>
+          <small>Must be at least 8 characters</small>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree with the <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Redirect to home after register
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      window.location.href = "home.html";
+    });
+  </script>
+
+</body>
+</html>
